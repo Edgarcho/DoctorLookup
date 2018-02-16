@@ -1,3 +1,5 @@
+var apiKey = require('./../.env').apiKey;
+
 $(document).ready(function(){
   $('#lookup-by-name-form').submit(function(event){
     event.preventDefault();
