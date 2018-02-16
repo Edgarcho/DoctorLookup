@@ -1,0 +1,22 @@
+{
+  "name": "doctor-lookup",
+  "description": "A web application that takes a user's medical issue and return a list of doctors in the Portland area who can treat that medical issue. User's will  have the option to search by doctors name.",
+  "main": "index.js",
+  "authors": [
+    "Edgar Hernandez <edgarchortiz@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "bootstrap": "^4.0.0",
+    "moment": "^2.20.1"
+  }
+}

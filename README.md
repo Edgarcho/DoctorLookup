@@ -30,6 +30,7 @@ A web application that takes a user's medical issue and return a list of doctors
   * Jquery
   * Gulp
   * Bower
+  * JSHint
   * Jasmine
   * Karma     
  * HTML
