@@ -7,6 +7,7 @@ var utilities = require('gulp-util');
 var del = require('del');
 var buildProduction = utilities.env.production;
 var jshint = require('gulp-jshint');
+var browserSync = require('browser-sync').create();
 
 var lib = require('bower-files')({
   "overrides":{
@@ -71,4 +72,24 @@ gulp.task('jshint', function(){
   return gulp.src(['js/*.js'])
     .pipe(jshint())
     .pipe(jshint.reporter('default'));
+});
+
+gulp.task('serve', function() {
+  browserSync.init({
+    server: {
+      baseDir: "./",
+      index: "index.html"
+    }
+  });
+
+  gulp.watch(['js/*.js'], ['jsBuild']);
+  gulp.watch(['bower.json'], ['bowerBuild']);
+});
+
+gulp.task('jsBuild', ['jsBrowserify', 'jshint'], function(){
+  browserSync.reload();
+});
+
+gulp.task('bowerBuild', ['bower'], function(){
+  browserSync.reload();
 });
