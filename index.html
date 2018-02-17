@@ -13,22 +13,18 @@
       <h2>Search by medical issue or name.</h2>
       <form id="lookup-form">
         <div class="form-group">
+          <label for="searchName">Enter a name:</label>
+          <input id="name" type="text">
           <label for="searchIssue">Enter a medical issue:</label>
           <input id="medical" type="text">
           <button class="btn btn-primary" type="submit">Submit</button>
         </div>
       </form>
-      <form id="lookup-by-name-form">
-        <div class="form-group">
-          <label for="searchName">Enter a name:</label>
-          <input id="name" type="text">
-          <button class="btn btn-primary" type="submit">Submit</button>
-        </div>
-      </form>
       <div id="result">
       </div>
-      <div id="errors">
-      </div>
+      <form id="clear">
+        <button type="submit">Clear Results</button>
+      </form>
     </div>
   </body>
 </html>
